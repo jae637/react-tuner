@@ -1,24 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+
+import H2 from './H2';
 
 function App() {
+  let text = "Hello World"
+  const [stateText,setStateText] = React.useState("Hello World");
+ 
+  function action(){
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <h2>{text}</h2>
+      <h2>{stateText}</h2>
+      <button onClick={action}>Button</button>
+    </>
   );
 }
 
